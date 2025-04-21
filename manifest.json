@@ -1,0 +1,28 @@
+
+{
+  "manifest_version": 3,
+  "name": "YouTube Summarizer",
+  "version": "1.0",
+  "description": "Summarizes YouTube videos using Together.ai API",
+  "permissions": ["activeTab", "storage", "scripting"],
+  "host_permissions": ["*://*.youtube.com/*"],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "images/icon16.png",
+      "48": "images/icon48.png",
+      "128": "images/icon128.png"
+    }
+  },
+  "icons": {
+    "16": "images/icon16.png",
+    "48": "images/icon48.png",
+    "128": "images/icon128.png"
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://*.youtube.com/watch*"],
+      "js": ["content.js"]
+    }
+  ]
+}

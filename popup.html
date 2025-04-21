@@ -1,0 +1,40 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>YouTube Summarizer</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1>YouTube Summarizer</h1>
+    
+    <div class="api-key-section">
+      <label for="apiKey">Together.ai API Key:</label>
+      <div class="input-group">
+        <input type="password" id="apiKey" placeholder="Enter your API key">
+        <button id="saveApiKey">Save</button>
+      </div>
+      <div class="api-status" id="apiStatus"></div>
+    </div>
+    
+    <div class="summary-section">
+      <h2>Video Summary</h2>
+      <div class="video-info" id="videoInfo"></div>
+      <div class="summary-content" id="summaryContent">
+        <div class="loader" id="loader" style="display: none;"></div>
+        <div id="summary"></div>
+      </div>
+      <div class="button-group">
+        <button id="getSummary">Summarize Video</button>
+        <button id="copySummary" style="display: none;">Copy Summary</button>
+        <button id="saveSummary" style="display: none;">Save as Text</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
